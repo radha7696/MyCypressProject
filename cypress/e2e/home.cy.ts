@@ -32,5 +32,10 @@ describe("Home page", () => {
       cy.getByData("course-2").find("a").contains("Get started").click()
       cy.location("pathname").should("equal", "/cypress-fundamentals")
     })
+
+    it("Fixtures Test", () => {
+        cy.fixture("example").then((user) => {
+        console.log(user.name);})
   })
+})
 })
